@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #8e0ed2, #ff0080);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background 0.5s ease-in-out;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer; /* Indica que se puede hacer clic */
+        }
+
+        h1 {
+            font-size: 2.2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .carta {
+            max-width: 800px;
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo para el corazón animado */
+        .corazon {
+            font-size: 100px;
+            color: red;
+            animation: late 1s infinite alternate;
+        }
+
+        @keyframes late {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+    </style>
+</head>
+<audio id="backgroundMusic" controls loop>
+    <source src="music.mp3">
+    Tu navegador no puede reproducir el audio.
+</audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let music = document.getElementById('backgroundMusic');
+
+        function playMusic() {
+            if (music) {
+                music.play().catch(error => {
+                    console.log("No se pudo reproducir el audio:", error);
+                });
+            } else {
+                console.log("Elemento de audio no encontrado");
+            }
+        }
+
+        document.body.addEventListener("click", playMusic);
+    });
+</script>
+
+<body onclick="playMusic()">
+    <h1>Andy 💜</h1>
+
+    <div class="carta">
+        Para mi hermosa novia 💜,<br><br>
+        Andy, amor, mi vida, mami, mi chiquita, mi princesa, mi novia, mi todo, te amo demasiado realmente como para dejar que todo
+        lo bonito que tenemos solo deje de estar, estos casi 6 meses que tenemos juntos realmente fueron los mejores despues de
+        tanto tiempo, no te imaginas la felicidad que me causas, estos momentos magicos y unicos,todo es perfecto a tu lado, algo a lo cual me acostumbre tanto a tener que no quiero que se vaya nunca,
+        que me hace ser la persona mas feliz, no te puedes imaginar lo especial e importante que eres para mi, estos 6 meses no los siento
+        como si hubieran sido 6 mese, los siento como si hubiera pasado mas tiempo, contigo me siento realmente autentico,
+        que puedo ser realmente feliz en esta relacion y ese sentimiento quiero que sea solo exclusivo para ti, no quiero a nadie
+        que no seas tu, quiero que tu seas la unica que entra asi en mi vida, porque realmente complementas mi vida de una manera
+        magica, llenas de felicidad mis dias y no sabes cuanto te amo y lo especial que eres para mi, no quiero que eso pase
+        con nadie mas, quiero que sea solamente contigo y nadie mas, porque tu eres mi todo 💜💜💜💜 <br><br>
+        Con cariño, tu novio Allan, que te ama mucho siempre. 💖
+    </div>
+
+    <!-- Corazón animado -->
+    <div class="corazon">❤️</div>
+
+</body>
+</html>
